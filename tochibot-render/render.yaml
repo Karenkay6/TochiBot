@@ -1,13 +1,16 @@
+
 databases:
   - name: tochibot-db
     databaseName: tochibot
     user: tochibot
     plan: free
+
 services:
   - type: web
     name: tochibot
     runtime: python
     plan: starter
+    rootDir: tochibot-render
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
