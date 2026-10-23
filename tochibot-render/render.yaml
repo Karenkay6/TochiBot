@@ -2,7 +2,7 @@ databases:
   - name: tochibot-db
     databaseName: tochibot
     user: tochibot
-    plan: basic
+    plan: free
 services:
   - type: web
     name: tochibot
